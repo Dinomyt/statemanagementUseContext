@@ -18,12 +18,12 @@ const Todo = () => {
 
     // Add new todo
   const addTodo = () => {
-   todoContext.todoDispatch({type:'ADD', todo: {id:generateRandomNumber(), title:'todo' + generateRandomNumber(),}})
+   todoContext.Dispatch({type:'ADD', todo: {id:generateRandomNumber(), title:'todo' + generateRandomNumber(),}})
   };
 
   // Delete a todo
   const deleteTodo = (id: number) => {
-    todoContext.todoDispatch({type:"DELETE",todoId: id})
+    todoContext.Dispatch({type:"DELETE",todoId: id})
   };
 
   return (

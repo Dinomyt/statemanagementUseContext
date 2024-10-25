@@ -1,27 +1,27 @@
-import { useContext, useReducer, useState } from 'react';
+import { useContext} from 'react';
 import LoginContext from '../contexts/loginContext';
 
 const Login  = () => {
   
-//   const [username, setUsername] = useState<string>('Jose!');
+// const [username, setUsername] = useState<string>('Jose!');
 // const  [user, dispatch] = useReducer(authReducer, '')
-const loginContext = useContext(LoginContext);
+const {user,Dispatch} = useContext(LoginContext);
 
   // Handle login
   const handleLogin = () => {
-    loginContext.loginDispatch({type:'LOGIN', username:'Neng!'})
+    Dispatch({type:'LOGIN', username:'Neng!'})
   }
   // Handle logout
   const handleLogout = () => {
-    loginContext.loginDispatch({type:"LOGOUT"})
+    Dispatch({type:"LOGOUT"})
 };
   
 
   return (
     <div className="container mt-5">
-      {loginContext.user ? (
+      {user ? (
           <div className='d-flex justify-content-between'>
-          <p style={{ color: 'blue', padding: '10px' }}>Hello {loginContext.user}</p>
+          <p style={{ color: 'blue', padding: '10px' }}>Hello {user}</p>
           <button className="btn btn-danger" onClick={handleLogout}>
             Log Out
           </button>

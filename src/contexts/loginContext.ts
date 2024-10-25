@@ -4,7 +4,7 @@ import { AuthAction } from "../reducers/authReducer";
 
 interface LoginContextType {
     user: string;
-    loginDispatch: Dispatch<AuthAction>
+    Dispatch: Dispatch<AuthAction>
 }
 
 const LoginContext = React.createContext<LoginContextType>({} as LoginContextType);
