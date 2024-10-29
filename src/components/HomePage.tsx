@@ -1,4 +1,4 @@
-import Todo from "./Todo"
+import Todo from "../state-management/Todos/Todo"
 
 
 const HomePage = () => {
@@ -9,7 +9,6 @@ const HomePage = () => {
         <div className="container-fluid">
             <div className="row">
                 <Todo/>
-
             </div>
 
 

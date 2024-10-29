@@ -1,5 +1,5 @@
 import { Dispatch } from "react";
-import { Todo, TodoAction } from "../reducers/TodoReducer"
+import { Todo, TodoAction } from "./TodoProvider"
 import React from "react";
 
 interface TodoContextType {

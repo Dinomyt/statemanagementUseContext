@@ -1,12 +1,10 @@
-import { useContext} from 'react';
-import LoginContext from '../contexts/loginContext';
+import useAuth from '../hooks/useAuth';
 
 const Login  = () => {
   
 // const [username, setUsername] = useState<string>('Jose!');
 // const  [user, dispatch] = useReducer(authReducer, '')
-const {user,Dispatch} = useContext(LoginContext);
-
+const {user,Dispatch} = useAuth();
   // Handle login
   const handleLogin = () => {
     Dispatch({type:'LOGIN', username:'Neng!'})

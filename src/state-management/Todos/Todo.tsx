@@ -1,17 +1,20 @@
-import { useContext, useReducer, useState } from "react"
-import todoReducer from "../reducers/TodoReducer";
-import TodoContext from "../contexts/todoContext";
-import LoginContext from "../contexts/loginContext";
+
+import { useContext } from "react";
+import useAuth from "../../hooks/useAuth";
+import TodoContext from "./todoContext";
 
 interface Todo {
     id: number;
     value:number;
 }
 
+const useTodos = () => useContext(TodoContext);
+
+
 const Todo = () => {
-    // const [todos, setTodos] = useState<Todo[]>([]);
-    const todoContext = useContext(TodoContext);
-    const loginContext = useContext(LoginContext);
+  const todoContext = useTodos();
+  const {user} = useAuth();
+
     const generateRandomNumber = ():number => {
         return Math.floor(Math.random() * 1000)
     }
@@ -31,7 +34,7 @@ const Todo = () => {
   
     <div className="container mt-5">
       <h1 className="mb-4">Todo List</h1>
-      {loginContext.user? <p>Hello {loginContext.user}</p> : <p></p>}
+      {user? <p>Hello {user}</p> : <p></p>}
       <button className="btn btn-primary mb-3" onClick={addTodo}>
         Add Todo
       </button>
