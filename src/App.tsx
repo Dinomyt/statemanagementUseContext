@@ -12,8 +12,7 @@ import LoginContext from "./contexts/loginContext"
 
 const App = () => {
   const [user, loginDispatch] = useReducer(authReducer, '');
-
-  const [todos, todoDispatch] = useReducer(todoReducer,[])
+  const [todos, todoDispatch] = useReducer(todoReducer,[]);
 
   return (
   <>
@@ -25,10 +24,9 @@ const App = () => {
 
 <TodoContext.Provider value={{todos,Dispatch: todoDispatch}}>
   <LoginContext.Provider value={{user, Dispatch: loginDispatch}}>
-  <MyNavbar/>
-  <HomePage/>
+    <MyNavbar/>
+    <HomePage/>
   </LoginContext.Provider>
-
 </TodoContext.Provider>
 
   </>
