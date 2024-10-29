@@ -3,11 +3,6 @@ import { useContext } from "react";
 import useAuth from "../../hooks/useAuth";
 import TodoContext from "./todoContext";
 
-interface Todo {
-    id: number;
-    value:number;
-}
-
 const useTodos = () => useContext(TodoContext);
 
 
