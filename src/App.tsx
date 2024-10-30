@@ -1,10 +1,8 @@
 import HomePage from "./components/HomePage"
 import MyNavbar from "./components/MyNavbar"
-import AuthProvider from "./reducers/AuthProvider"
+import AuthProvider from "./state-management/Auth/AuthProvider"
+import Counter from "./state-management/Counter/Counter"
 import TodoProvider from "./state-management/Todos/TodoProvider"
-
-
-
 
 
 const App = () => {
@@ -21,6 +19,7 @@ const App = () => {
 
     <AuthProvider>
       <TodoProvider>
+        <Counter/>
           <MyNavbar/>
           <HomePage/>
       </TodoProvider>

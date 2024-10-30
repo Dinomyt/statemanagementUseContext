@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import TodoContext from "../state-management/Todos/todoContext";
-import Login from "./Login";
+import Login from "../state-management/Auth/Login";
 
 const MyNavbar = () => {
   const todoContext = useContext(TodoContext);

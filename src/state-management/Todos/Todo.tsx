@@ -1,6 +1,6 @@
 
 import { useContext } from "react";
-import useAuth from "../../hooks/useAuth";
+import useAuth from "../Auth/useAuth";
 import TodoContext from "./todoContext";
 
 const useTodos = () => useContext(TodoContext);
